@@ -1,0 +1,55 @@
+.challenge-wrapper{
+    display: flex;
+}
+
+.video-wrapper{
+    width: 60%;
+}
+
+.challenge-sideInfo{
+    width: 40%;
+    padding: 20px 20px 20px 20px;
+}
+
+/*Company card*/
+
+.company-div{
+    width: 80%;
+    height: 110px;
+    display: flex;
+    background-color: #05404E;
+    padding: 10px
+}
+
+.material-icons{
+    color: #679FAC;
+}
+
+.company-div h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*Aufgabenstellung*/
+.challenge-task{
+    width: 80%;
+}
+
+
+.challenge-task h1{
+    color:#C7493A;
+    font-family: 'Righteous', cursive;
+}
+
+/*Belohnung*/
+
+.challenge-reward{
+    width: 80%;
+}
+
+
+.challenge-reward h1{
+    color:#C7493A;
+    font-family: 'Righteous', cursive;
+}
+

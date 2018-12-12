@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div><app-toolbar></app-toolbar></div>
+
+<div class="main-wrapper">
+    <div id="sidebar">
+        This is the sidebar
+        <!--<div class="sidebar_nav_item">Sidebar Nav</div>
+        <div class="sidebar_nav_item">Sidebar Nav</div>
+        <div class="sidebar_nav_item">Sidebar Nav</div>-->
+        <mat-nav-list>
+            <a mat-list-item href=""><h3>Sidebar nav 1</h3></a>
+            <a mat-list-item href=""><h3>Sidebar nav 2</h3></a>
+            <a mat-list-item href=""><h3>Sidebar nav 3</h3></a>
+            <a mat-list-item href=""><h3>Sidebar nav 4</h3></a>
+        </mat-nav-list>
+    </div>
+    <div id="main-content">
+        <!--Overview
+        <mat-divider></mat-divider>
+        <app-overview></app-overview>
+        Latest Challenges
+        <mat-divider></mat-divider>
+        <app-challenge-list></app-challenge-list>-->
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<a routerLink="/challenge-create"
+   *ngIf="currentUrl === '/'" >
+    <button mat-button>
+        <i class="material-icons md-36 add-challenge-icon">add_circle</i>   
+        NEW CHALLENGE
+    </button>
+</a>
+
+<button 
+    mat-button 
+    class="TestButton"
+    (click)="onTestClicked()">  
+        TEST BUTTON
+</button> 

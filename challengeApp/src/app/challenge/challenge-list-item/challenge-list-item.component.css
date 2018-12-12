@@ -1,0 +1,52 @@
+.challenge-card{
+    max-width: 100%;
+}
+
+mat-card{
+    padding:10px;
+    /*background-color: transparent;*/
+    background-color: black;
+    color:#D8D0C5;
+}
+
+mat-card-title{
+    font-size: 1.1em !important;
+    font-weight: 600;
+}
+
+mat-card-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+mat-card-header i{
+    margin-left: auto;
+}
+
+mat-card-header{
+    height: 50px;
+    
+}
+
+mat-card-header mat-card-subtitle{
+    color:#D8D0C5;
+}
+
+.mat-card-image{
+    margin-bottom: 0px !important;
+}
+
+.mat-card-avatar{
+    width:32px;
+    height: 32px;
+}
+
+.userPic1{
+    background-image: url("/assets/pics/George_Clooney.jpg");
+    background-size: cover;
+}
+
+/*rating*/
+.fullstar{
+    color:#C7493A;
+}

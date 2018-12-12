@@ -1,0 +1,19 @@
+Overview
+<mat-divider></mat-divider>
+<app-overview></app-overview>
+
+Latest Challenges
+<mat-divider></mat-divider>
+
+<mat-grid-list cols="4" rowHeight="350px" gutterSize="10px">
+  <mat-grid-tile *ngFor="let challenge of challenges">
+
+    <app-challenge-list-item
+      [challenge] = "challenge"
+    
+    ></app-challenge-list-item>
+
+  </mat-grid-tile>
+
+  
+</mat-grid-list>

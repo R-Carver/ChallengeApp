@@ -1,0 +1,47 @@
+#overview-wrapper{
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#overview-wrapper mat-card{
+    flex-basis: 150px;
+    margin-right: 20px;
+    box-shadow: 3px 3px 10px #D8D0C5;
+    font-family: 'Anton', sans-serif;
+    color: #222;
+}
+
+.overview1{
+    background-color: #C7493A;
+    
+}
+
+.overview2{
+    background-color: #689775;
+    
+}
+.overview3{
+    background-color: #7E9DA4;
+}
+
+.mat-badge-content{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color:#D8D0C5;
+    color: #222;
+    
+}
+
+#mat-badge-content-0{
+    background-color:#A62E1E;
+}
+
+#mat-badge-content-1{
+    background-color:#487F56;
+}
+
+#mat-badge-content-2{
+    background-color:#57808A;
+}

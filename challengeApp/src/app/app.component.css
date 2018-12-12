@@ -1,0 +1,74 @@
+.main-wrapper{
+    display: flex;
+    color: #D8D0C5;
+}
+
+#main-content{
+    width: 75%;
+    /*border: 2px solid #D8D0C5;*/
+}
+
+/*SIDEBAR*/
+
+#sidebar{
+    padding-top: 10px;
+    padding-right: 30px;
+    width: 25%;
+    /*border: 2px solid #D8D0C5;*/
+}
+
+.sidebar_nav_item{
+
+    width: 200px;
+    height: 60px;
+    background-color: #D8D0C5;
+    color: #120D1E;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 60px;
+}
+
+mat-nav-list{
+    background-color: #D8D0C5;
+}
+
+mat-nav-list a:hover{
+    /*background-color: white;*/
+}
+
+/*CONTENT*/
+
+#main-content{
+    padding-top: 10px;
+}
+
+mat-divider{
+    background-color: #D8D0C5;
+    margin-bottom: 10px;
+}
+
+/*New Challenge Button*/
+
+.mat-button{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #D8D0C5;
+    background-color: #C7493A;
+    font-family: 'Righteous', cursive;
+}
+
+.add-challenge-icon{
+    margin: 10px;
+    color: #D8D0C5;
+}
+
+/*Test Button*/
+.TestButton{
+    position: fixed;
+    bottom: 10px;
+    right: 220px;
+    color: black;
+    background-color: #D8D0C5;
+    font-family: 'Righteous', cursive;
+}

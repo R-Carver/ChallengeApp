@@ -1,0 +1,19 @@
+mat-divider{
+    background-color: #D8D0C5;
+    margin-bottom: 10px;
+}
+
+mat-grid-tile{
+    background-color: transparent;
+    margin: 10px 10px 10px 0px;
+    /*border: 1px solid #D8D0C5;*/
+    box-shadow: 1px 1px 5px #D8D0C5;
+}
+
+mat-grid-tile:hover{
+    border: 1px solid #D8D0C5;
+}   
+
+
+
+
