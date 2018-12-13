@@ -8,14 +8,14 @@ const challengesRoutes = require("./routes/challenge");
 const app = express();
 
 mongoose
-    .connect("mongodb+srv://david:hieYkgzvV5W85eKn@cluster0-le9rb.mongodb.net/challengeApp")
+    .connect("mongodb+srv://david:hieYkgzvV5W85eKn@cluster0-le9rb.mongodb.net/challengeAppLocalTest")
     .then(() => {
         console.log("Connected to database!");
     })
     .catch(() => {
         console.log("Connection failed!");
     });
-
+    
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {

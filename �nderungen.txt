@@ -1,0 +1,33 @@
+17.10
+
+RoutingModule einbauen und Seiten rudimentär verlinken
+//erledigt
+
+Aufsetzen des Backend
+//erledigt
+
+18.10.18
+
+rudimentaere User einbauen
+//erledigt
+
+23.10.18
+
+rudimentaere Challenges einbauen
+//challenges koennen nun hochgeladen werden
+//erledigt
+
+09.11.18
+
+challenges aus Datenbank laden und anzeigen
+//erledigt
+
+28.11.18
+
+Bilder upload einbauen
+
+12.12.18
+
+Challenge Erstellung auf "Reactive" umstellen
+
+Bilder upload einbauen

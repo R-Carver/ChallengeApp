@@ -1,55 +1,53 @@
 <h2>Here you can create a new Challenge</h2>
 
 <mat-card>
-  <form (submit)="onSaveChallenge(challengeForm)" #challengeForm="ngForm">
+  <form [formGroup]="form" (submit)="onSaveChallenge()" >
     <mat-form-field>
       <input
         matInput 
         type="text"
-        name="title"
-        [ngModel]="challenge?.title"
-        required
+        formControlName = "title"
         placeholder="Challenge Title"
-        #title="ngModel">
-      <mat-error *ngIf="title.invalid">Please enter a challenge title</mat-error>
+        >
+      <mat-error *ngIf="form.get('title').invalid">Please enter a challenge title</mat-error>
     </mat-form-field>
     <mat-form-field>
       <textarea
         matInput
         rows="6" 
         type="text"
-        name="description"
-        [ngModel]="challenge?.description"
+        formControlName="description"
         placeholder="Challenge Description"
-        #description="ngModel"></textarea>
-      <mat-error *ngIf="description.invalid">If you like you can enter some description</mat-error>
+        ></textarea>
+      <mat-error *ngIf="form.get('description').invalid">If you like you can enter some description</mat-error>
     </mat-form-field>
     <mat-form-field>
       <textarea
         matInput
         rows="6" 
         type="text"
-        name="task"
-        [ngModel]="challenge?.task"
+        formControlName="task"
         placeholder="Challenge Task"
-        #description="ngModel"></textarea>
+        ></textarea>
     </mat-form-field>
     <mat-form-field>
       <input
         matInput 
         type="text"
-        name="videoLink"
-        [ngModel]="challenge?.videoLink"
-        required
+        formControlName="videoLink"
         placeholder="Youtube Link"
-        #videoLink="ngModel">
-      <mat-error *ngIf="videoLink.invalid">Please enter a valid Youtube Link</mat-error>
+        >
+      <mat-error *ngIf="form.get('videoLink').invalid">Please enter a valid Youtube Link</mat-error>
     </mat-form-field>
 
     <div>
       <button mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
       <!-- Hide this input because its ugly. Instead the button simulates the click -->
-      <input type="file" #filePicker>
+      <input type="file" #filePicker (change)="onImagePicked($event)">
+    </div>
+
+    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+      <img [src]="imagePreview" [alt]="form.value.title">
     </div>
 
     <button

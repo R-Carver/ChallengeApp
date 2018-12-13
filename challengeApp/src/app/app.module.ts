@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule} from './app.routing.module';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule} from "@angular/forms";
+import { ReactiveFormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { 
@@ -63,7 +64,8 @@ import { ChallengeListItemComponent } from './challenge/challenge-list-item/chal
     MatBadgeModule,
     MatGridListModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
