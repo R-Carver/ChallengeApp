@@ -16,8 +16,13 @@ export class ChallengesService{
     
     constructor(private http: HttpClient, private router: Router){}
 
-    addChallenge(title: string, description: string, videoLink: string, task:string){
-        const challenge: Challenge = {
+    addChallenge(
+        title: string, 
+        description: string, 
+        videoLink: string, 
+        task:string,
+        image: File){
+        /*const challenge: Challenge = {
             id: null,
             title: title,
             description: description,
@@ -25,8 +30,20 @@ export class ChallengesService{
             task: task,
             reward: null,
             rating: null
-        };
-        this.http.post<{message: string, challengeId: string}>('http://localhost:3000/api/challenges', challenge)
+        };*/
+
+        //we use the FormData object here because it can combine json and blob (file) values
+        const challengeData = new FormData();
+        challengeData.append("title", title);
+        challengeData.append("description", description);
+        challengeData.append("videoLink", videoLink);
+        challengeData.append("task", task);
+        //the first argument here must match the string which is passed to the
+        //multer().single("bla") function in challenge.js
+        challengeData.append("image", image, title);
+
+
+        this.http.post<{message: string, challengeId: string}>('http://localhost:3000/api/challenges', challengeData)
         //this.http.post<{message: string, challengeId: string}>('http://challengeapp-env.swmfmp2gwb.us-east-1.elasticbeanstalk.com/api/challenges', challenge)
             .subscribe((responseData) => {
                 console.log("Request for adding a challenge was sent");

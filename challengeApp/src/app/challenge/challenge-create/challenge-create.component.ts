@@ -48,7 +48,8 @@ export class ChallengeCreateComponent implements OnInit {
           this.form.value.title, 
           this.form.value.description, 
           this.form.value.videoLink,
-          this.form.value.task);
+          this.form.value.task,
+          this.form.value.image);
     this.form.reset();
   }
 }
