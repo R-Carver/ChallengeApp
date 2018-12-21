@@ -32,16 +32,22 @@ const storage = multer.diskStorage({
 //function is called
 
 router.post("", multer({storage: storage}).single("image"), (req, res, next) => {
+    
+    const url = req.protocol + '://' + req.get("host");
     const challenge = new Challenge({
         title: req.body.title,
         description: req.body.description,
         videoLink: req.body.videoLink,
-        task: req.body.task
+        task: req.body.task,
+        imagePath: url + "/images/" + req.file.filename
     })
     challenge.save().then(createdChallenge => {
         res.status(201).json({
             messege:'Challenge added successfully',
-            challengeId: createdChallenge._id
+            challenge:{
+                ...createdChallenge,
+                id: createdChallenge._id
+            }
         });
     });
 })

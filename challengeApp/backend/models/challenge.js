@@ -6,7 +6,8 @@ const challengeSchema = mongoose.Schema({
     videoLink:{type: String, required: false},
     task:{type: String},
     reward:{type: String},
-    rating:{type: Number}
+    rating:{type: Number},
+    imagePath: {type: String}
 });
 
 module.exports = mongoose.model('Challenge', challengeSchema);

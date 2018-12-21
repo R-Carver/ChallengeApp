@@ -6,4 +6,5 @@ export interface Challenge{
     task: string;
     reward: string;
     rating: number;
+    imagePath: string;
 }

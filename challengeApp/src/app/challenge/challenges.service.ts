@@ -43,9 +43,19 @@ export class ChallengesService{
         challengeData.append("image", image, title);
 
 
-        this.http.post<{message: string, challengeId: string}>('http://localhost:3000/api/challenges', challengeData)
+        this.http.post<{message: string, challenge: Challenge}>('http://localhost:3000/api/challenges', challengeData)
         //this.http.post<{message: string, challengeId: string}>('http://challengeapp-env.swmfmp2gwb.us-east-1.elasticbeanstalk.com/api/challenges', challenge)
             .subscribe((responseData) => {
+                const challenge: Challenge = {
+                    id: responseData.challenge.id,
+                    title: responseData.challenge.title,
+                    description: responseData.challenge.description,
+                    videoLink: responseData.challenge.videoLink,
+                    task: responseData.challenge.task,
+                    reward: null,
+                    rating: null,
+                    imagePath: responseData.challenge.imagePath
+                }
                 console.log("Request for adding a challenge was sent");
                 this.router.navigate(["/"]);
             });
@@ -61,7 +71,8 @@ export class ChallengesService{
                         description: challenge.description,
                         videoLink: challenge.videoLink,
                         id: challenge._id,
-                        task: challenge.task
+                        task: challenge.task,
+                        imagePath: challenge.imagePath
                     };
                 });
             }))
